@@ -1,18 +1,10 @@
 package com.facebook.tests;
 
-
 import com.facebook.annotations.FrameworkAnnotation;
-import com.facebook.pages.HomePage;
 import com.facebook.pages.LoginPage;
-import com.facebook.reports.ExtentManager;
 import com.facebook.testdata.TestData;
 import com.facebook.utils.DataProviderUtils;
-import io.github.sskorol.core.DataSupplier;
-import io.github.sskorol.data.TestDataReader;
-import io.github.sskorol.data.XlsxReader;
-import one.util.streamex.StreamEx;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class HomePageTest extends BaseTest{
