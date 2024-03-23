@@ -6,8 +6,8 @@ import com.facebook.pages.pagecomponent.TopMenuComponent;
 
 public class HomePage {
 
-    private TopMenuComponent topMenuComponent;
-    private FooterMenuComponent footerMenuComponent;
+    private final TopMenuComponent topMenuComponent;
+    private final FooterMenuComponent footerMenuComponent;
 
     public HomePage(){
         topMenuComponent = new TopMenuComponent();

@@ -1,9 +1,6 @@
 package com.facebook.pages;
 
-import com.facebook.enums.WaitType;
 import com.facebook.reports.ExtentLogger;
-import com.facebook.reports.ExtentManager;
-import com.facebook.reports.ExtentReport;
 import org.openqa.selenium.By;
 
 import static com.facebook.utils.SeleniumUtils.*;

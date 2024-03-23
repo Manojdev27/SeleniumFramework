@@ -2,7 +2,6 @@ package com.facebook.testdata;
 
 
 import com.creditdatamw.zerocell.annotation.Column;
-import com.creditdatamw.zerocell.converter.IntegerConverter;
 
 public class TestData {
 
