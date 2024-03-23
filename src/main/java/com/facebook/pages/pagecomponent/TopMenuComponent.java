@@ -16,8 +16,8 @@ public class TopMenuComponent {
     }
    private static final By LNK_PROFILE = By.xpath("/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div[1]/ul/li/div/a/div[1]/div[2]/div");
 
-    public void clickProfile(){
-       click(LNK_PROFILE);
+    public void clickProfile(String menu){
+       click(LNK_PROFILE, menu);
     }
 
 //    public void clickPIMMenu(){

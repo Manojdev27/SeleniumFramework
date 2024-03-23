@@ -18,7 +18,7 @@ public class HomePage {
     }
 
     public void clickOnProfile(){
-        topMenuComponent.clickProfile();
+        topMenuComponent.clickProfile("value");
     }
 
     public String footerText(){
