@@ -18,5 +18,6 @@ public class PaymentTest extends BaseTest{
                 .getHomePageTitle();
         Assert.assertEquals(actualTitle, testData.expectedTitle);
         System.out.println("Payment Test");
+        System.out.println(testData.username + " "+ testData.password+ " "+ testData.expectedTitle);
     }
 }

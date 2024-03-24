@@ -1,30 +1,30 @@
 package com.facebook.driver;
 
+import com.facebook.config.ConfigFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public final class DriverFactory {
 
     private DriverFactory(){
 
     }
-    public static WebDriver getDriver(String browserName){
+    public static WebDriver getDriver(String runmode, String browserName) throws MalformedURLException {
 
-        WebDriver driver;
-
-        if(browserName.equalsIgnoreCase("chrome")){
-            WebDriverManager.chromedriver().setup(); // setup chrome driver according to the browser version
-            driver = new ChromeDriver();// Open chrome Driver
-        } else if (browserName.equalsIgnoreCase("edge")) {
-            WebDriverManager.edgedriver().setup();// setup edge driver according to the browser version
-            driver = new EdgeDriver();// Open edge Driver
-        } else{
-            WebDriverManager.firefoxdriver().setup(); // setup firefox driver according to the browser version
-            driver = new FirefoxDriver();// Open firefox Driver
+        WebDriver driver = null;
+        if(runmode.equalsIgnoreCase("local")){
+          driver =  LocalDriverFactory.getLocalDriver(browserName);
+        } else if (runmode.equalsIgnoreCase("remote")) {
+          driver = RemoteDriverFactory.getRemoteDriver(browserName);
         }
-return driver;
+        return driver;
     }
 }

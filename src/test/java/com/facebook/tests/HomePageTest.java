@@ -32,5 +32,6 @@ public class HomePageTest extends BaseTest{
                 .getHomePageTitle();
 //        System.out.println(DriverManager.getDriver().getTitle());
         Assert.assertEquals(actualTitle, testData.expectedTitle);
+        System.out.println(testData.username + " "+ testData.password+ " "+ testData.expectedTitle);
     }
 }
